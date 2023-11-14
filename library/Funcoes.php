@@ -41,21 +41,5 @@ class Funcoes
         return number_format($valor, $decimais, ",", ".");
     }
 
-    /**
-     * userLogado
-     *
-     * @return bool
-     */
-    public static function userLogado($nivel = 1)
-    {
-        if (isset($_SESSION['userId'])) {
-            if ($_SESSION['userNivel'] == $nivel) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        return false;
-    }
+    
 }

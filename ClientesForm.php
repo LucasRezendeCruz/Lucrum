@@ -32,10 +32,11 @@
 
                 <div class="">
 
-                    <div class="">
-                        <label for="cpfcnpj" class="form-label">CPF/CNPJ: </label>
-                        <input type="number" class="form-control" placeholder="000.000.000-00"name="cpfcnpj" id="cpfcnpj" dir="rtl" required
-                                value="<?= isset($dados->cpfcnpj) ? $dados->cpfcnpj : '' ?>">
+                <div class="">
+                        <label for="cpfcnpj" class="form-label">RCPF/CNPJ: </label>
+                        <input type="text" class="form-control" name="cpfcnpj" 
+                            id="cpfcnpj" placeholder="000.000.000-00" required maxlength="100"
+                            value="<?= isset($dados->cpfcnpj) ? $dados->cpfcnpj : "" ?>">
                     </div>
 
 
@@ -148,22 +149,7 @@
 
         </main>
 
-        <script src="ckeditor5/ckeditor5-build-classic/ckeditor.js"></script>
-
-        <script type="text/javascript">
-
-            $(document).ready( function() { 
-                
-                $('#cpfcnpj').mask('###.###.###-##', {reverse: true});
-            })
-
-            ClassicEditor
-                .create(document.querySelector('#caracteristicas'))
-                .catch( error => {
-                    console.error(error);
-                });
-
-        </script>
+        
 
 <?php
 

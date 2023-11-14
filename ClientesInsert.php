@@ -2,7 +2,7 @@
     require_once "library/Database.php";
     require_once "library/Funcoes.php";
 
-    if (isset($_POST['cpfcnpj'])) {
+    if (isset($_POST['razao'])) {
 
         $db = new Database();
 
@@ -11,7 +11,7 @@
             
 
             $result = $db->dbInsert("INSERT INTO clientes
-                                    (cpfcnpj, razao, telefone, email, logradouro, numero, municipio, bairro, cep, estado)
+                                    (cpfcnpj, razao, telefone, email, logradouro, numero, bairro, municipio, cep, estado)
                                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                                     [
                                         $_POST['cpfcnpj'],

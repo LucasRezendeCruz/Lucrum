@@ -91,22 +91,7 @@
 
         </main>
 
-        <script src="ckeditor5/ckeditor5-build-classic/ckeditor.js"></script>
-
-        <script type="text/javascript">
-
-            $(document).ready( function() { 
-                
-                $('#precoVenda').mask('##.###.###.###,##', {reverse: true});
-            })
-
-            ClassicEditor
-                .create(document.querySelector('#caracteristicas'))
-                .catch( error => {
-                    console.error(error);
-                });
-
-        </script>
+        
 
 <?php
 

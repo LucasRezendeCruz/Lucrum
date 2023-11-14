@@ -66,12 +66,12 @@
                 </<thead>
                 <tbody>
                     <?php
-                        foreach ($data as $data) {
+                        foreach ($data as $row) {
                             ?>
                             <tr>
-                                <td><?= $data['pedidos.id'] ?></td>
-                                <td><?= $data['clientes.razao'] ?></td>
-                                <td><?= $data['predidos.status'] ?></td>
+                                <td><?= $row['pedidos.id'] ?></td>
+                                <td><?= $row['clientes.razao'] ?></td>
+                                <td><?= $row['predidos.status'] ?></td>
                                 <td>
                                     <a href="PedidosForm.php?acao=update&id=<?= $row['id'] ?>" ><span class="warning">Alterar</span></a>
                                     <a href="PedidosForm.php?acao=delete&id=<?= $row['id'] ?>" ><span class="danger">Excluir</span></a>
