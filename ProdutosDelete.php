@@ -10,6 +10,7 @@
                                     WHERE id = ?",
                                     [$_POST['id']]
                                 );            
+            eturn header("Location: Produtos.php");
         } catch (Exception $ex) {
             echo '<p style="color: red;">ERROR: '. $ex->getMessage(). "</p>";
         }

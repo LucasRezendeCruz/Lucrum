@@ -9,11 +9,12 @@
             $result = $db->dbDelete("DELETE FROM clientes 
                                     WHERE id = ?",
                                     [$_POST['id']]
-                                );            
+                                );        
+            return header("Location: Clientes.php");                        
         } catch (Exception $ex) {
             echo '<p style="color: red;">ERROR: '. $ex->getMessage(). "</p>";
         }
 
     } else {
-        return header("Location: Produtos.php");
+        return header("Location: Clientes.php");
     }

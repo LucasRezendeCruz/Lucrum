@@ -71,9 +71,9 @@
                                 <td><?= $row['razao'] ?></td>
                                 <td><?= $row['cpfcnpj'] ?></td>
                                 <td>
-                                    <a href="ProdutosForm.php?acao=update&id=<?= $row['id'] ?>" ><span class="warning">Alterar</span></a>
-                                    <a href="ProdutosForm.php?acao=delete&id=<?= $row['id'] ?>" ><span class="danger">Excluir</span></a>
-                                    <a href="ProdutosForm.php?acao=view&id=<?= $row['id'] ?>"   ><span class="sucess">Visualizar</span></a>
+                                    <a href="ClientesForm.php?acao=update&id=<?= $row['id'] ?>" ><span class="warning">Alterar</span></a>
+                                    <a href="ClientesForm.php?acao=delete&id=<?= $row['id'] ?>" ><span class="danger">Excluir</span></a>
+                                    <a href="ClientesForm.php?acao=view&id=<?= $row['id'] ?>"   ><span class="sucess">Visualizar</span></a>
                                 </td>
                             </tr>
                             <?php

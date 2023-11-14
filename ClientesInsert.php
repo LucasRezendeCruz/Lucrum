@@ -11,8 +11,8 @@
             
 
             $result = $db->dbInsert("INSERT INTO clientes
-                                    (cpfcnpj, razao, telefone, email, logradouro, numero, bairro, cep, estado)
-                                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                                    (cpfcnpj, razao, telefone, email, logradouro, numero, municipio, bairro, cep, estado)
+                                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                                     [
                                         $_POST['cpfcnpj'],
                                         $_POST['razao'],
@@ -21,14 +21,15 @@
                                         $_POST['logradouro'],
                                         $_POST['numero'],
                                         $_POST['bairro'],
+                                        $_POST['municipio'],
                                         $_POST['cep'],
                                         $_POST['estado']
                                     ]);
 
             if ($result) {
-                return header("Location: Produtos.php?msgSucesso=Registro inserido com sucesso.");
+                return header("Location: Clientes.php?msgSucesso=Registro inserido com sucesso.");
             } else {
-                return header("Location: Produtos.php?msgError=Falha ao tentar inserir o registro.");
+                return header("Location: Clientes.php?msgError=Falha ao tentar inserir o registro.");
             }
                 
             
@@ -38,5 +39,5 @@
         }
         
     } else {
-        return header("Location: Produtos.php");
+        return header("Location: Clientes.php");
     }

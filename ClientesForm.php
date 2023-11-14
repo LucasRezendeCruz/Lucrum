@@ -48,8 +48,8 @@
 
                     <div class="">
                         <label for="telefone" class="form-label">Telefone: </label>
-                        <input type="text" class="form-control" name="razao" 
-                            id="telefone" placeholder="Telefone" required maxlength="100"
+                        <input type="text" class="form-control" name="telefone" 
+                            id="telefone" placeholder="" required maxlength="15"
                             value="<?= isset($dados->telefone) ? $dados->telefone : "" ?>">
                     </div>
 
@@ -95,6 +95,8 @@
                             value="<?= isset($dados->municipio) ? $dados->municipio : "" ?>">
                     </div>
 
+                    
+
                     <div class="">
                         <label for="estado" class="form-label">Estado: </label>
                         <select name="estado" id="estado" class="form-control" required>
@@ -111,7 +113,7 @@
                             <option value="10" <?= (isset($dados->estado) ? ($dados->estado == "10" ? 'selected' : '') : "")  ?>>Maranhão</option>
                             <option value="11" <?= (isset($dados->estado) ? ($dados->estado == "11" ? 'selected' : '') : "")  ?>>Mato Grosso</option>
                             <option value="12" <?= (isset($dados->estado) ? ($dados->estado == "12" ? 'selected' : '') : "")  ?>>Mato Grosso do Sul</option>
-                            <option value="12" <?= (isset($dados->estado) ? ($dados->estado == "13" ? 'selected' : '') : "")  ?>>Minas Gerais</option>
+                            <option value="13" <?= (isset($dados->estado) ? ($dados->estado == "13" ? 'selected' : '') : "")  ?>>Minas Gerais</option>
                             <option value="13" <?= (isset($dados->estado) ? ($dados->estado == "14" ? 'selected' : '') : "")  ?>>Pará</option>
                             <option value="15" <?= (isset($dados->estado) ? ($dados->estado == "15" ? 'selected' : '') : "")  ?>>Paraíba</option>
                             <option value="16" <?= (isset($dados->estado) ? ($dados->estado == "16" ? 'selected' : '') : "")  ?>>Paraná</option>

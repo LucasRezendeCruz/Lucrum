@@ -23,9 +23,9 @@
                                     ]);
 
             if ($result) {
-                return header("Location: Produtos.php?msgSucesso=Registro alterado com sucesso.");
+                return header("Location: Clientes.php?msgSucesso=Registro alterado com sucesso.");
             } else {
-                return header("Location: Produtos.php?msgError=Falha ao tentar alterar o registro.");
+                return header("Location: Clientes.php?msgError=Falha ao tentar alterar o registro.");
             }
             
         } catch (Exception $ex) {
@@ -33,5 +33,5 @@
         }
 
     } else {
-        return header("Location: Produtos.php");
+        return header("Location: Clientes.php");
     }

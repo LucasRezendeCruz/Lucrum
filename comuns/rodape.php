@@ -1,8 +1,14 @@
 <?php
 
 $db = new Database();
-$clientes = $db->dbSelect("SELECT count(id) AS QUANTCLIENTES FROM produtos");
+$clientes = $db->dbSelect("SELECT count(id) AS QUANTCLIENTES FROM clientes");
+$pedon = $db->dbSelect("SELECT count(tipo) AS QUANTON FROM pedidos WHERE tipo = '1'");
+$pedoff = $db->dbSelect("SELECT count(tipo) AS QUANTOFF FROM pedidos WHERE tipo = '2'");
+$fantasia = $db->dbSelect("SELECT fantasia AS fantasia FROM empresa");
 
+$clientefantasia = $fantasia[0]['fantasia'];
+$online = $pedon[0]['QUANTON'];
+$offline = $pedoff[0]['QUANTOFF'];
 $qtd = $clientes[0]['QUANTCLIENTES'];
 
 
@@ -19,11 +25,11 @@ $qtd = $clientes[0]['QUANTCLIENTES'];
                 </div>
                 <div class="profile">
                     <div class="info">
-                        <p>Olá, <b>Cliente</b></p>
+                        <p>Olá, <b><?php echo $clientefantasia ; ?></b></p>
                         <small class="text-muted lucrum">Plano V.1</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="/images/profile-1.jpg" alt="client">
+                        <img src="/images/download.png" alt="client">
                     </div>
                 </div>
             </div>
@@ -37,7 +43,7 @@ $qtd = $clientes[0]['QUANTCLIENTES'];
                         <div class="info">
                             <h3>Vendas Online</h3>
                         </div>
-                        <h3>3000</h3>
+                        <h3><?php echo $online ; ?></h3>
                     </div>
                 </div>
                 <div class="item offline">
@@ -46,7 +52,7 @@ $qtd = $clientes[0]['QUANTCLIENTES'];
                         <div class="info">
                             <h3>Vendas Físicas</h3>
                         </div>
-                        <h3>1500</h3>
+                        <h3><?php echo $offline ; ?></h3>
                     </div>
                 </div>
                 <div class="item clients">
