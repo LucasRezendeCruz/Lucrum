@@ -11,7 +11,10 @@
     <!-- MATERIAL CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp"  rel="stylesheet"/>
     <!-- STYLESHHET -->
-    <link rel="stylesheet" href="style.css"></div>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
 
 </head>
 <body>

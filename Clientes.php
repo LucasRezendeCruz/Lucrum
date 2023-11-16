@@ -16,7 +16,7 @@
 ?>
 
     <main>
-        <h1>Lista Clientes</h1>
+        <h1>Lista de Clientes</h1>
         <div class="btnadd">
             <div>
                 <a href="ClientesForm.php?acao=insert" title="Novo">
@@ -59,7 +59,7 @@
                         <th>ID</th>
                         <th>Razão</th>
                         <th>CPF/CNPJ</th>
-                        <th>Opções</th>
+                        <th class="teste">Opções</th>
                     </tr>
                 </<thead>
                 <tbody>
@@ -70,7 +70,7 @@
                                 <td><?= $row['id'] ?></td>
                                 <td><?= $row['razao'] ?></td>
                                 <td><?= $row['cpfcnpj'] ?></td>
-                                <td>
+                                <td class="opcoes">
                                     <a href="ClientesForm.php?acao=update&id=<?= $row['id'] ?>" ><span class="warning">Alterar</span></a>
                                     <a href="ClientesForm.php?acao=delete&id=<?= $row['id'] ?>" ><span class="danger">Excluir</span></a>
                                     <a href="ClientesForm.php?acao=view&id=<?= $row['id'] ?>"   ><span class="sucess">Visualizar</span></a>

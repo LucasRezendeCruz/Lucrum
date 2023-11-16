@@ -17,7 +17,7 @@
     }
     ?>
 
-        <main>
+        <main class="mainform">
             <div>
                 <div>
                     <h1>Clientes <?= subTitulo($_GET['acao']) ?></h1> 
@@ -25,81 +25,87 @@
 
             </div>
 
-            <form action="Clientes<?= $_GET['acao'] ?>.php" method="POST" 
-                enctype="multipart/form-data">
+            <form action="Clientes<?= $_GET['acao'] ?>.php" method="POST" >
 
                 <input type="hidden" name="id" id="id" value="<?= isset($dados->id) ? $dados->id : "" ?>">
 
-                <div class="">
+                <div class="rowform">
 
-                <div class="">
-                        <label for="cpfcnpj" class="form-label">RCPF/CNPJ: </label>
-                        <input type="text" class="form-control" name="cpfcnpj" 
-                            id="cpfcnpj" placeholder="000.000.000-00" required maxlength="100"
-                            value="<?= isset($dados->cpfcnpj) ? $dados->cpfcnpj : "" ?>">
-                    </div>
-
-
-                    <div class="">
-                        <label for="razao" class="form-label">Razão: </label>
+                    <div class="input-box">
+                        <label for="razao" class="form-label">Razão</label>
                         <input type="text" class="form-control" name="razao" 
                             id="razao" placeholder="Razão Social ou Nome" required maxlength="100"
                             value="<?= isset($dados->razao) ? $dados->razao : "" ?>">
                     </div>
+                </div>
 
-                    <div class="">
-                        <label for="telefone" class="form-label">Telefone: </label>
-                        <input type="text" class="form-control" name="telefone" 
-                            id="telefone" placeholder="" required maxlength="15"
-                            value="<?= isset($dados->telefone) ? $dados->telefone : "" ?>">
+                <div class="rowform">
+                    <div class="input-box">
+                        <label for="cpfcnpj" class="form-label">CPF</label>
+                        <input type="text" class="small" name="cpfcnpj" 
+                            id="cpfcnpj" placeholder="XXX.XXX.XXX-XX" required maxlength="100"
+                            value="<?= isset($dados->cpfcnpj) ? $dados->cpfcnpj : "" ?>">
                     </div>
 
-                    <div class="">
-                        <label for="email" class="form-label">Email: </label>
+                    <div class="input-box">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input type="text" class="form-control" name="telefone" 
+                            id="telefone" placeholder="(XX) XXXXX-XXXX" required maxlength="15"
+                            value="<?= isset($dados->telefone) ? $dados->telefone : "" ?>">
+                    </div>
+                </div>
+
+                <div class="rowform">
+
+                    <div class="input-box">
+                        <label for="email" class="form-label">Email</label>
                         <input type="text" class="form-control" name="email" 
                             id="email" placeholder="lucas@lucrum.com.br" required maxlength="100"
                             value="<?= isset($dados->email) ? $dados->email : "" ?>">
                     </div>
+                </div>
 
-                    <div class="">
-                        <label for="cep" class="form-label">CEP: </label>
-                        <input type="text" class="form-control" name="cep" 
-                            id="cep" placeholder="36.880-000" required maxlength="100"
-                            value="<?= isset($dados->cep) ? $dados->cep : "" ?>">
-                    </div>
-
-                    <div class="">
-                        <label for="logradouro" class="form-label">Logradouro: </label>
+                <div class="rowform">
+                    <div class="input-box">
+                        <label for="logradouro" class="form-label">Logradouro</label>
                         <input type="text" class="form-control" name="logradouro" 
                             id="logradouro" placeholder="Rua A" required maxlength="100"
                             value="<?= isset($dados->logradouro) ? $dados->logradouro : "" ?>">
                     </div>
+                </div>
 
-                    <div class="">
-                        <label for="numero" class="form-label">Número: </label>
+                <div class="rowform">
+                    <div class="input-box">
+                        <label for="numero" class="form-label">Número</label>
                         <input type="text" class="form-control" name="numero" 
                             id="numero" placeholder="10" required maxlength="100"
                             value="<?= isset($dados->numero) ? $dados->numero : "" ?>">
                     </div>
 
-                    <div class="">
-                        <label for="bairro" class="form-label">Bairro: </label>
+                    <div class="input-box">
+                        <label for="bairro" class="form-label">Bairro</label>
                         <input type="text" class="form-control" name="bairro" 
                             id="bairro" placeholder="Centro" required maxlength="100"
                             value="<?= isset($dados->bairro) ? $dados->bairro : "" ?>">
                     </div>
-
-                    <div class="">
-                        <label for="municipio" class="form-label">Município: </label>
+                </div>
+                <div class="rowform">
+                    <div class="input-box">
+                        <label for="municipio" class="form-label">Município</label>
                         <input type="text" class="form-control" name="municipio" 
                             id="municipio" placeholder="Muriaé" required maxlength="100"
                             value="<?= isset($dados->municipio) ? $dados->municipio : "" ?>">
                     </div>
 
-                    
+                    <div class="input-box">
+                        <label for="cep" class="form-label">CEP</label>
+                        <input type="text" class="form-control" name="cep" 
+                            id="cep" placeholder="36.880-000" required maxlength="100"
+                            value="<?= isset($dados->cep) ? $dados->cep : "" ?>">
+                    </div>                   
 
-                    <div class="">
-                        <label for="estado" class="form-label">Estado: </label>
+                    <div class="input-box">
+                        <label for="estado" class="form-label">Estado</label>
                         <select name="estado" id="estado" class="form-control" required>
                             <option value=""   <?= (isset($dados->estado) ? ($dados->estado == ""  ? 'selected' : '') : "")   ?>>Estado</option>
                             <option value="1"  <?= (isset($dados->estado) ? ($dados->estado == "1" ? 'selected' : '') : "")   ?>>Acre</option>
@@ -138,7 +144,7 @@
 
                 <input type="hidden" name="id_" id="id" value="<?= (isset($dados->id) ? $dados->id : "") ?>">
 
-                <div class="">
+                <div class="btngravar">
                     <a href="Clientes.php" class="">Voltar</a>
                     
                     <?php if ($_GET['acao'] != "view"): /* botão gravar não é exibido na visualização dos dados */ ?>
@@ -149,6 +155,12 @@
 
         </main>
 
+    <script type="text/javascript">
+    $("#telefone").mask("(00) 00000-0000");
+    </script>
+    <script type="text/javascript">
+    $("#cpfcnpj").mask("000.000.000-00");
+    </script>
         
 
 <?php

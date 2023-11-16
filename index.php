@@ -2,7 +2,10 @@
     require_once "comuns/cabecalho.php";
     require_once "library/DataBase.php";
 
+    $db = new Database();
+    $pedidos = $db->dbSelect("SELECT count(id) AS pedidos FROM pedidos");
 
+    $tpedidos = $pedidos[0]['pedidos'];
 
     
 ?>
@@ -59,7 +62,7 @@
                     <div class="middle">
                         <div class="left">
                             <h3>Total de Pedidos</h3>
-                            <h1>vendas</h1>
+                            <h1><?php echo $tpedidos ; ?> Pedidos</h1>
                         </div>
                         <div class="progress">
                             <svg>
@@ -131,7 +134,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <a href="#">Mostrar Todos</a>
+                <a href="Pedidos.php">Mostrar Todos</a>
             </div>
         </main>
         <!------------------------- END OF MAIN ------------------------->

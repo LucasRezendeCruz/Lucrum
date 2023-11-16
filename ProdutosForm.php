@@ -32,20 +32,23 @@
 
                 <div class="">
 
-                    <div class="">
+                    <div class="input-box">
                         <label for="descricao" class="form-label">Descrição: </label>
                         <input type="text" class="form-control" name="descricao" 
                             id="descricao" placeholder="Descriçào do Produto" required maxlength="100"
                             value="<?= isset($dados->descricao) ? $dados->descricao : "" ?>">
                     </div>
+                </div>
 
-                    <div class="">
+                <div class="rowform">
+                    <div class="input-box">
                         <label for="preco" class="form-label">Preço: </label>
-                        <input type="text" class="form-control" name="preco" id="preco" dir="rtl" required
-                                value="<?= isset($dados->preco) ? $dados->preco : '0,00' ?>">
+                        <input type="number" class="form-control" name="preco" id="preco" required
+                                value="<?= isset($dados->preco) ? $dados->preco : "" ?>">
                     </div>
 
-                    <div class="">
+
+                    <div class="input-box">
                         <label for="unidade" class="form-label">Unidade Medida: </label>
                         <select name="unidade" id="unidade" class="form-control" required>
                             <option value="14"   <?= (isset($dados->unidade) ? ($dados->unidade == "14"  ? 'selected' : '') : "") ?>>Unidade</option>
@@ -75,12 +78,11 @@
 
                         </select>
                     </div>
-
                 </div>
 
                 <input type="hidden" name="id_" id="id" value="<?= (isset($dados->id) ? $dados->id : "") ?>">
 
-                <div class="">
+                <div class="btngravar">
                     <a href="Produtos.php" class="">Voltar</a>
                     
                     <?php if ($_GET['acao'] != "view"): /* botão gravar não é exibido na visualização dos dados */ ?>
@@ -91,6 +93,7 @@
 
         </main>
 
+   
         
 
 <?php

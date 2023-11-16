@@ -14,7 +14,7 @@
     // Buscar a lista de Produtos na base de dados
     $data = $db->dbSelect("SELECT pedidos.id,clientes.razao,pedidos.status FROM pedidos       
                            INNER JOIN clientes ON clientes.id = pedidos.cliente 
-                           ORDER BY pedidos.id");
+                           ORDER BY pedidos.id DESC");
 ?>
 
     <main>

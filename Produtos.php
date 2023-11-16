@@ -16,7 +16,7 @@
 ?>
 
     <main>
-        <h1>Lista Produtos</h1>
+        <h1 >Lista de Produtos</h1>
         <div class="btnadd">
             <div>
                 <a href="ProdutosForm.php?acao=insert" title="Novo">
@@ -54,12 +54,12 @@
         <div class="recent-order">
             
             <table id="tbListaProduto">
-                <thead >
+                <thead>
                     <tr>
                         <th>ID</th>
                         <th>Descrição</th>
                         <th>Preço</th>
-                        <th>Opções</th>
+                        <th class="teste">Opções</th>
                     </tr>
                 </<thead>
                 <tbody>
@@ -70,7 +70,7 @@
                                 <td><?= $row['id'] ?></td>
                                 <td><?= $row['descricao'] ?></td>
                                 <td><?= $row['preco'] ?></td>
-                                <td>
+                                <td class="opcoes">
                                     <a href="ProdutosForm.php?acao=update&id=<?= $row['id'] ?>" ><span class="warning">Alterar</span></a>
                                     <a href="ProdutosForm.php?acao=delete&id=<?= $row['id'] ?>" ><span class="danger">Excluir</span></a>
                                     <a href="ProdutosForm.php?acao=view&id=<?= $row['id'] ?>"   ><span class="sucess">Visualizar</span></a>

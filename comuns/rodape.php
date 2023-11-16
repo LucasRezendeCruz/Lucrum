@@ -67,7 +67,7 @@ $qtd = $clientes[0]['QUANTCLIENTES'];
                 <div class="item add-product">
                     <div>
                         <span class="material-symbols-sharp">add</span>
-                        <h3>Adicionar Produto</h3>
+                        <h3>Adicionar Pedido</h3>
                     </div>
                 </div>
             </div>

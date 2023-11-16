@@ -362,12 +362,21 @@ main .recent-order table{
 main .recent-order table:hover{
     box-shadow: none;
 }
-
+main table th.teste{
+    width: 30%;
+}
 main table tbody td{
     height: 2.8rem;
     border-bottom: 1px solid var(--color-light);
     color: var(--color-dark-variant);
 }
+ 
+main table tbody td.opcoes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 main table tbody tr:last-child td{
     border: none;
 }
@@ -377,7 +386,6 @@ main .recent-order a{
     display: block;
     margin: 0 auto;
 }
-
 
 
 /* ===================== PEDIDOS RECENTES ===================== */
@@ -503,8 +511,9 @@ main .recent-order a{
     font-weight: 800;
 }
 
-
-
+.btnadd{
+    margin-top: 20px;
+}
 
 .btnadd a{
     background-color: var(--color-lucrum);
@@ -514,6 +523,7 @@ main .recent-order a{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px 50px;
 }
 
 .btnadd div a{
@@ -527,9 +537,66 @@ main .recent-order a{
     font-weight: 800;
 }
 
+.btngravar{
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.btngravar a{
+    background-color: var(--color-lucrum);
+    border:  var(--color-lucrum);
+    border-radius: var(--border-radius-2);
+    color: var(--color-white);
+    font-weight: 800;
+    padding: 10px 50px; 
+    margin-right: 5px; 
+    
+}
 
+.btngravar button{
+    background-color: var(--color-lucrum);
+    border:  var(--color-lucrum);
+    border-radius: var(--border-radius-2);
+    color: var(--color-white);
+    font-weight: 800;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+/* ===================== FORMULÁRIO ===================== */
 
-
+main form{
+    margin-top: 20px;
+}
+form .rowform{
+    display: flex;
+    width: 100%;
+}
+form .rowform div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form .input-box{
+    margin: 10px;
+}
+form label{
+    font-weight: 500;
+}
+form input{
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    height: 15px;
+    margin-right: 10px;
+    border: 0.5px solid var(--color-lucrum);
+    border-radius: var(--border-radius-2);
+}
+form select{
+    height: 32px;
+    border: 0.5px solid var(--color-lucrum);
+    border-radius: var(--border-radius-2);
+}
 
 
 @media screen and (max-width: 1200px) {
